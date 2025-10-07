@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "icon": "/images/basketball.svg",
+    "title": "Sport played",
+    "number": "1",
+    "sortorder": 1
+  },
+  {
+    "id": 2,
+    "icon": "/images/watch.svg",
+    "title": "Years experience",
+    "number": "15+",
+    "sortorder": 1
+  },
+  {
+    "id": 3,
+    "icon": "/images/star.svg",
+    "title": "Awards won",
+    "number": "1",
+    "sortorder": 1
+  },
+  {
+    "id": 4,
+    "icon": "/images/coffee.svg",
+    "title": "Coffee consumed",
+    "number": "1286+",
+    "sortorder": 1
+  }
+]

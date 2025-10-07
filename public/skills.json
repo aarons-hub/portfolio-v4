@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Adobe Creative Suite",
+    "percentage": "95%",
+    "image": "/images/adobe-skill-thumb.png",
+    "description": "Morbi eleifend, mi vehicula sagittis scelerisque, sapien velit egestas ex, nec molestie velit velit at urna. Integer eu lectus at justo venenatis facilisis ac ac tellus. Aenean varius est a ante semper, id blandit sem convallis.",
+    "sortorder": 1
+  },
+  {
+    "id": 2,
+    "title": "Looker Studio",
+    "percentage": "75%",
+    "image": "/images/treasury-looker-dash-thumb.png",
+    "description": "Quisque consequat facilisis lorem non suscipit. Quisque nec urna et dui finibus semper. Quisque ultrices finibus est.",
+    "sortorder": 2
+  },
+  {
+    "id": 3,
+    "title": "Squiz Matrix",
+    "percentage": "70%",
+    "image": "/images/squiz-skill-thumb.png",
+    "description": "Maecenas vel nunc tincidunt, tempor augue nec, gravida augue. Aenean ultrices neque et convallis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "sortorder": 3
+  },
+  {
+    "id": 4,
+    "title": "Wordpress",
+    "percentage": "75%",
+    "image": "/images/wordpress-skill-thumb.png",
+    "description": "how now brown cow",
+    "sortorder": 4
+  },
+  {
+    "id": 5,
+    "title": "SharePoint",
+    "percentage": "80%",
+    "image": "/images/sharepoint-skill.png",
+    "description": "how now brown cow",
+    "sortorder": 5
+  },
+  {
+    "id": 6,
+    "title": "CSS - HTML - jQuery",
+    "percentage": "90%",
+    "image": "/images/jquery-skill-thumb.png",
+    "description": "how now brown cow",
+    "sortorder": 6
+  },
+  {
+    "id": 7,
+    "title": "Photography",
+    "percentage": "90%",
+    "image": "/images/photography-skill-thumb.png",
+    "description": "how now brown cow",
+    "sortorder": 9
+  }
+]
