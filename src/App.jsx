@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { About } from "./components/About";
 import Resume from "./components/Resume";
 import { References } from "./components/References";
@@ -8,6 +8,7 @@ import { Ticker } from "./components/Ticker";
 import Portfolio from "./components/Portfolio";
 import { Contact } from "./components/Contact";
 import { UpArrow } from "./components/UpArrow";
+import { PinnedGraphic } from "./components/PinnedGraphic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -24,42 +25,42 @@ function App() {
   //     const pinnedTimeout = setTimeout(() => {
   //       const sections = [
   //         {
-  //           id: "#ABOUT",
-  //           x: 0,
+  //           id: "#about",
+  //           x: 800,
   //           y: 0,
-  //           start: "top center",
-  //           end: "bottom center",
+  //           start: "top top",
+  //           end: "center center",
   //         },
   //         {
-  //           id: "#RESUME",
+  //           id: "#resume",
   //           x: 1800,
   //           y: 0,
   //           start: "top center",
   //           end: "bottom top",
   //         },
   //         {
-  //           id: "#REFERENCES",
+  //           id: "#references",
   //           x: 1200,
   //           y: 200,
   //           start: "top center",
   //           end: "bottom top",
   //         },
   //         {
-  //           id: "#SKILLS",
+  //           id: "#skills",
   //           x: 1600,
   //           y: -100,
   //           start: "top center",
   //           end: "bottom top",
   //         },
   //         {
-  //           id: "#PORTFOLIO",
+  //           id: "#portfolio",
   //           x: 2000,
   //           y: 300,
   //           start: "top center",
   //           end: "bottom top",
   //         },
   //         {
-  //           id: "#CONTACT",
+  //           id: "#contact",
   //           x: 2400,
   //           y: 0,
   //           start: "top center",
@@ -72,8 +73,6 @@ function App() {
   //         tl.to(pinnedRef.current, {
   //           x: section.x,
   //           y: section.y,
-  //           duration: 1,
-  //           ease: "none",
   //         });
 
   //         ScrollTrigger.create({
@@ -99,45 +98,92 @@ function App() {
   //   () => {
   //     const pinnedTimeout = setTimeout(() => {
   //       const sections = [
-  //         { id: "#ABOUT", x: 800, y: 0 },
-  //         { id: "#RESUME", x: 1800, y: 0 },
-  //         { id: "#REFERENCES", x: 1200, y: 200 },
-  //         { id: "#SKILLS", x: 1600, y: -100 },
-  //         { id: "#PORTFOLIO", x: 2000, y: 300 },
-  //         { id: "#CONTACT", x: 2400, y: 0 },
+  //         { id: "#about", x: 800, y: 0 },
+  //         { id: "#resume", x: 1800, y: 0 },
+  //         { id: "#references", x: 1200, y: 200 },
+  //         { id: "#skills", x: 1600, y: -100 },
+  //         { id: "#portfolio", x: 2000, y: 300 },
+  //         { id: "#contact", x: 2400, y: 0 },
   //       ];
+
+  //       // Create timeline
   //       const tl = gsap.timeline();
+
+  //       // Build sequence
   //       sections.forEach((section) => {
   //         tl.to(pinnedRef.current, {
   //           x: section.x,
   //           y: section.y,
-  //           duration: 1,
   //           ease: "none",
   //         });
   //       });
+
   //       ScrollTrigger.create({
   //         animation: tl,
-  //         trigger: sections[0].id,
-  //         start: "top top",
-  //         endTrigger: sections[sections.length - 1].id,
-  //         end: "bottom center",
+  //         trigger: containerRef.current,
+  //         start: "top center",
+  //         end: "+=6000",
   //         scrub: true,
+  //         pin: pinnedInnerRef.current,
+  //         anticipatePin: 1,
   //         markers: true,
   //         id: "PIN-MULTI",
-  //         pin: pinnedInnerRef.current,
-  //         pinSpacing: false,
   //       });
+
+  //       console.log("Timeline children:", tl.getChildren());
+  //       console.log("ScrollTriggers:", ScrollTrigger.getAll());
+  //       console.log("Pinned element:", pinnedInnerRef.current);
+  //       console.log("Animated element:", pinnedRef.current);
   //     }, 2000);
+
   //     return () => clearTimeout(pinnedTimeout);
   //   },
   //   { scope: containerRef }
   // );
 
+  useGSAP(
+    () => {
+      const pinnedTimeout = setTimeout(() => {
+        ///////////////////
+        const tl1 = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#about",
+            start: "top top",
+            end: "bottom center",
+            scrub: true,
+            markers: true,
+            id: "#about",
+            // pin: pinnedInnerRef.current,
+            // pinSpacing: false,
+          },
+        });
+        tl1.to(pinnedInnerRef.current, { x: 100, y: 1000 });
+        ///////////////////
+        const tl2x = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#ticker",
+            start: "top center",
+            end: "bottom center",
+            scrub: true,
+            markers: false,
+            id: "#ticker",
+            pin: pinnedInnerRef.current,
+            pinSpacing: false,
+          },
+        });
+        tl2.to(pinnedInnerRef.current, { x: -100, y: 0 });
+      }, 1000);
+
+      return () => clearTimeout(pinnedTimeout);
+    },
+    { scope: containerRef }
+  );
+
   return (
     <div ref={containerRef} className="main-inner">
       <div className="section-container">
-        {/* <div className="pinned-wrapper" ref={pinnedInnerRef}>
-          <div className="pinned-inner">
+        {/* <div className="pinned-wrapper">
+          <div className="pinned-inner" ref={pinnedInnerRef}>
             <PinnedGraphic ref={pinnedRef} />
           </div>
         </div> */}

@@ -947,3 +947,9 @@ header .title {
   border: none;
   background-color: var(--third-color);
 }
+
+.pinned-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  border: 1px solid;
+}
