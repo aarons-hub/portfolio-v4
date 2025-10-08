@@ -750,5 +750,14 @@
     "content": "Graphic design element",
     "category": "Graphics",
     "sortorder": 129
+  },
+  {
+    "id": 86,
+    "image": "/images/portfolio/images/DSCF0603-mono.jpg",
+    "thumbnail": "/images/portfolio/thumbnails/DSCF0603-mono.jpg",
+    "title": "Private",
+    "content": "Private photography",
+    "category": "Photography",
+    "sortorder": 129
   }
 ]
