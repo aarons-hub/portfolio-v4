@@ -16,6 +16,7 @@ export default function Portfolio() {
   const [data, setData] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Web");
+  const [clickedUrl, setClickedUrl] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -68,6 +69,7 @@ export default function Portfolio() {
     setCurrentIndex(index);
     setClickedImg(item.image);
     setClickedTitle(item.title);
+    setClickedUrl(item.url || null); // store the URL if it exists
   };
 
   const handleRotationRight = () => {
@@ -279,6 +281,7 @@ export default function Portfolio() {
           <Modal
             clickedImg={clickedImg}
             clickedTitle={clickedTitle}
+            clickedUrl={clickedUrl}
             setClickedImg={setClickedImg}
             handleRotationRight={handleRotationRight}
             handleRotationLeft={handleRotationLeft}

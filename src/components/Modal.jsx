@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 const Modal = ({
   clickedImg,
   clickedTitle,
+  clickedUrl,
   handleRotationRight,
   handleRotationLeft,
   setClickedImg,
@@ -68,6 +69,16 @@ const Modal = ({
             <img loading="lazy" src={clickedImg} alt={clickedTitle} />
           </div>
           <div className="modal-footer">
+            {clickedUrl && (
+              <a
+                href={clickedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-primary rounded-pill px-4 visit"
+              >
+                Visit site
+              </a>
+            )}
             <button
               className="btn btn-secondary rounded-pill px-4"
               onClick={handleClose}

@@ -943,3 +943,7 @@ header .title {
   font-weight: 600;
   border: 1px solid #fff;
 }
+.modal .modal-dialog .modal-content .modal-footer .btn.visit {
+  border: none;
+  background-color: var(--third-color);
+}
