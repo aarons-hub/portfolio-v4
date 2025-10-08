@@ -10,7 +10,7 @@ export const Ticker = () => {
 
   const [portfolioData, setPortfolioData] = useState([]);
   const selectedIds = [
-    75, 2, 3, 26, 47, 31, 47, 48, 27, 38, 44, 50, 54, 56, 6, 13, 30, 27,
+    75, 2, 3, 26, 47, 31, 47, 48, 27, 38, 44, 50, 54, 56, 6, 13, 30, 27, 84, 85,
   ];
 
   useEffect(() => {
@@ -60,7 +60,6 @@ export const Ticker = () => {
           overflow: "hidden",
           whiteSpace: "nowrap",
           width: "100%",
-          border: "1px solid #ccc",
           padding: "10px 0",
         }}
       >

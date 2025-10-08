@@ -6,7 +6,7 @@ export const DownloadBtn = () => {
   return (
     <div className="download-btn-wrapper">
       <a
-        href="/resume.pdf"
+        href="docs/aaron-resume.pdf"
         className="btn btn-outline-primary rounded-pill py-3 px-4 mt-2 position-relative download"
         onMouseEnter={() => setAnimateBadge(true)}
         onMouseLeave={() => setAnimateBadge(false)}

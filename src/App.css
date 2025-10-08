@@ -938,8 +938,8 @@ header .title {
   border-radius: 30px !important;
   width: 48px;
   height: 48px;
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: var(--third-color);
+  color: var(--primary-color);
   font-weight: 600;
-  border: none;
+  border: 1px solid #fff;
 }

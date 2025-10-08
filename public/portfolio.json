@@ -732,5 +732,23 @@
     "content": "Office chairs photography",
     "category": "Photography",
     "sortorder": 129
+  },
+  {
+    "id": 84,
+    "image": "/images/portfolio/images/hydromet-panel.jpg",
+    "thumbnail": "/images/portfolio/thumbnails/hydromet-panel.jpg",
+    "title": "Hydromet, Pipes, valves and fittings",
+    "content": "Logo design",
+    "category": "Graphics",
+    "sortorder": 105
+  },
+  {
+    "id": 85,
+    "image": "/images/portfolio/images/hydromet-graphic.jpg",
+    "thumbnail": "/images/portfolio/thumbnails/hydromet-graphic.jpg",
+    "title": "Hydromet, Pipes, valves and fittings",
+    "content": "Graphic design element",
+    "category": "Graphics",
+    "sortorder": 129
   }
 ]

@@ -88,8 +88,8 @@ export const About = () => {
         <div className="intro">
           <div className="intro-inner">
             <h1>
-              <div className="animate">Digital content specialist</div>
-              <div className="animate">with 15+ years in government and</div>
+              <div className="animate">Digital specialist with 15+ years</div>
+              <div className="animate">experience in government and</div>
               <div className="animate">education, blending design,</div>
               <div className="animate">front-end dev and publishing.</div>
             </h1>
