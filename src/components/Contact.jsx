@@ -213,7 +213,7 @@ export const Contact = () => {
                   </div>
                   <div className="row">
                     <div className="col"></div>
-                    <div className="col">
+                    <div className="col send-btn">
                       <button
                         type="submit"
                         className="btn btn-primary rounded-pill mt-4 contact-btn px-5 py-3"

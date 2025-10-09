@@ -174,7 +174,7 @@ a {
   color: #8b8b8b;
 }
 /****************** Begin new design ***************/
-.container.custom {
+.container {
   padding: 0;
   /* max-width: 992px; */
 }
@@ -702,6 +702,9 @@ header .title {
   color: #fff;
   text-align: center;
 }
+.intro h1 .animate {
+  padding-bottom: 0.25rem;
+}
 .badge {
   background-color: var(--third-color);
   color: var(--primary-color);
@@ -893,6 +896,7 @@ header .title {
   }
   .portfolio .pagination-wrapper {
     justify-content: center !important;
+    padding-top: 1rem;
   }
   .portfolio .btn-group.gap-1 {
     margin-bottom: 10px;
@@ -919,12 +923,7 @@ header .title {
   .portfolio .btn-group.gap-1 {
     flex-wrap: wrap;
   }
-  .skills-items {
-    padding-top: 25px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 1rem;
-  }
+
   .skills-items-inner-inner {
     max-width: 100%;
     padding-left: 0.5rem !important;
@@ -943,9 +942,13 @@ header .title {
     padding-right: 0.25rem !important;
   }
   .skills .arrow-wrapper {
-    width: 48px !important;
+    width: 32px !important;
     padding-left: 0;
     padding-right: 0;
+  }
+  .skills-arrow {
+    width: 32px;
+    height: 32px;
   }
   .skills .skill-image {
     display: none !important;
@@ -965,6 +968,12 @@ header .title {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
+  .skills-items {
+    padding-top: 2rem !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+  }
 
   .navbar .navbar-brand {
     margin: 0rem;
@@ -981,13 +990,101 @@ header .title {
   }
   .navbar .navbar-nav li.nav-item a.nav-link {
     font-size: 0.8rem;
-    padding-left: 0.5 !important;
-    padding-right: 0.5 !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-bottom: 0rem !important;
   }
   .intro-inner h1 {
     font-size: 1.2rem;
   }
   .download-btn-container {
     display: none;
+  }
+  .resume.container .display-1,
+  .references.container .display-1 {
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  .resume.container .resume-col {
+    width: 100% !important;
+  }
+  .resume.container .history {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .resume.container .history .row {
+    justify-content: center;
+  }
+  .resume.container .brutal-wrapper,
+  .references.container .brutal-wrapper,
+  .skills.container .brutal-wrapper,
+  .portfolio.container .brutal-wrapper,
+  .contact.container .brutal-wrapper {
+    display: none;
+  }
+  .resume.container .section-number,
+  .references.container .section-number,
+  .skills.container .section-number,
+  .portfolio.container .section-number,
+  .contact.container .section-number {
+    display: none;
+  }
+  .resume .custom-heading .display-1,
+  .references .custom-heading .display-1,
+  .skills .custom-heading .display-1,
+  .portfolio .custom-heading .display-1,
+  .contact .custom-heading .display-1 {
+    letter-spacing: 5px;
+  }
+  .resume.container .history .highlight {
+    display: none;
+  }
+  .resume.container .history h5.custom-title {
+    text-align: center;
+    justify-content: center;
+  }
+  .resume .custom-heading,
+  .references .custom-heading,
+  .skills .custom-heading,
+  .portfolio .custom-heading,
+  .contact .custom-heading {
+    position: inherit;
+    padding-top: 2rem;
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .resume.container .custom-subtitle {
+    text-align: center;
+  }
+  .references.container .references-col {
+    width: 100%;
+    padding-top: 2rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .references.container .card-body {
+    text-align: center;
+  }
+  .references .card-image {
+    text-align: center;
+    margin: 0 auto !important;
+  }
+  .references .card-image-wrapper {
+    text-align: center;
+  }
+  .portfolio-content {
+    padding-top: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .contact-wrapper {
+    padding-top: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .send-btn {
+    text-align: center;
   }
 }
