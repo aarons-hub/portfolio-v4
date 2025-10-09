@@ -141,43 +141,43 @@ function App() {
   //   { scope: containerRef }
   // );
 
-  useGSAP(
-    () => {
-      const pinnedTimeout = setTimeout(() => {
-        ///////////////////
-        const tl1 = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#about",
-            start: "top top",
-            end: "bottom center",
-            scrub: true,
-            markers: true,
-            id: "#about",
-            // pin: pinnedInnerRef.current,
-            // pinSpacing: false,
-          },
-        });
-        tl1.to(pinnedInnerRef.current, { x: 100, y: 1000 });
-        ///////////////////
-        const tl2x = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#ticker",
-            start: "top center",
-            end: "bottom center",
-            scrub: true,
-            markers: false,
-            id: "#ticker",
-            pin: pinnedInnerRef.current,
-            pinSpacing: false,
-          },
-        });
-        tl2.to(pinnedInnerRef.current, { x: -100, y: 0 });
-      }, 1000);
+  // useGSAP(
+  //   () => {
+  //     const pinnedTimeout = setTimeout(() => {
+  //       ///////////////////
+  //       const tl1 = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: "#about",
+  //           start: "top top",
+  //           end: "bottom center",
+  //           scrub: true,
+  //           markers: false,
+  //           id: "#about",
+  //           // pin: pinnedInnerRef.current,
+  //           // pinSpacing: false,
+  //         },
+  //       });
+  //       tl1.to(pinnedInnerRef.current, { x: 100, y: 1000 });
+  //       ///////////////////
+  //       const tl2x = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: "#ticker",
+  //           start: "top center",
+  //           end: "bottom center",
+  //           scrub: true,
+  //           markers: false,
+  //           id: "#ticker",
+  //           pin: pinnedInnerRef.current,
+  //           pinSpacing: false,
+  //         },
+  //       });
+  //       tl2.to(pinnedInnerRef.current, { x: -100, y: 0 });
+  //     }, 1000);
 
-      return () => clearTimeout(pinnedTimeout);
-    },
-    { scope: containerRef }
-  );
+  //     return () => clearTimeout(pinnedTimeout);
+  //   },
+  //   { scope: containerRef }
+  // );
 
   return (
     <div ref={containerRef} className="main-inner">

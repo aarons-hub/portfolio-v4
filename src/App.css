@@ -12,6 +12,19 @@
   font-display: swap;
 }
 :root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  --safe-area-inset-left: env(safe-area-inset-left);
+  --safe-area-inset-right: env(safe-area-inset-right);
+}
+
+.app {
+  padding-top: var(--safe-area-inset-top);
+  padding-bottom: var(--safe-area-inset-bottom);
+  padding-left: var(--safe-area-inset-left);
+  padding-right: var(--safe-area-inset-right);
+}
+:root {
   --primary-color: #511124;
   --secondary-color: #ff6333;
   --third-color: #fdd6aa;
@@ -604,115 +617,6 @@ header .title {
   border: 1px solid #eee !important;
 }
 
-@media (width < 768px) {
-  .contact .contact-col {
-    width: 100%;
-  }
-  .contact .p-5.position-relative {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
-  .contact .form-wrapper form .row {
-    flex-direction: column;
-  }
-  .contact .contact-col .row {
-    flex-direction: column;
-  }
-  .contact .content {
-    text-align: center;
-    padding-top: 1rem;
-  }
-  .portfolio .row-custom .col-5.ms-auto {
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  .portfolio .row-custom .col-5.ms-auto .custom.display-1 {
-    text-align: center;
-  }
-  .portfolio .row-custom {
-    padding-top: 192px;
-    padding-bottom: 14px;
-  }
-  .portfolio .btn-group-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .portfolio .pagination-wrapper {
-    justify-content: center !important;
-  }
-  .portfolio .btn-group.gap-1 {
-    margin-bottom: 10px;
-  }
-  .portfolio .btn-group.gap-1 .btn,
-  .portfolio button.page-link {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-  }
-  .portfolio-items {
-    height: 612px;
-  }
-  .portfolio-items .col {
-    flex-basis: 50%;
-  }
-  .portfolio .portfolio-items .card {
-    height: 100px;
-  }
-  .portfolio .col-5.ms-auto {
-    margin: 0 !important;
-  }
-  .portfolio .btn-group.gap-1 {
-    flex-wrap: wrap;
-  }
-  .skills-items {
-    padding-top: 25px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 1rem;
-  }
-  .skills-items-inner-inner {
-    max-width: 100%;
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    justify-content: space-between;
-  }
-  .skills .skills-number {
-    width: 32px !important;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-  .skills .skill-item {
-    padding-left: 0.25rem !important;
-    padding-right: 0.25rem !important;
-  }
-  .skills .arrow-wrapper {
-    width: 48px !important;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .skills .skill-image {
-    display: none !important;
-  }
-  .skills-description-inner .col {
-    width: 32px !important;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-  .skills-description-text {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-    width: 70%;
-  }
-  .skills .spacer {
-    width: 32px !important;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-}
-
 .pinned-wrapper {
   position: relative;
   z-index: 999;
@@ -952,4 +856,138 @@ header .title {
   max-width: 1320px;
   margin: 0 auto;
   border: 1px solid;
+}
+
+@media (width < 768px) {
+  .contact .contact-col {
+    width: 100%;
+  }
+  .contact .p-5.position-relative {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .contact .form-wrapper form .row {
+    flex-direction: column;
+  }
+  .contact .contact-col .row {
+    flex-direction: column;
+  }
+  .contact .content {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .portfolio .row-custom .col-5.ms-auto {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .portfolio .row-custom .col-5.ms-auto .custom.display-1 {
+    text-align: center;
+  }
+  .portfolio .row-custom {
+    padding-top: 192px;
+    padding-bottom: 14px;
+  }
+  .portfolio .btn-group-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .portfolio .pagination-wrapper {
+    justify-content: center !important;
+  }
+  .portfolio .btn-group.gap-1 {
+    margin-bottom: 10px;
+  }
+  .portfolio .btn-group.gap-1 .btn,
+  .portfolio button.page-link {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .portfolio-items {
+    height: 612px;
+  }
+  .portfolio-items .col {
+    flex-basis: 50%;
+  }
+  .portfolio .portfolio-items .card {
+    height: 100px;
+  }
+  .portfolio .col-5.ms-auto {
+    margin: 0 !important;
+  }
+  .portfolio .btn-group.gap-1 {
+    flex-wrap: wrap;
+  }
+  .skills-items {
+    padding-top: 25px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .skills-items-inner-inner {
+    max-width: 100%;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    justify-content: space-between;
+  }
+  .skills .skills-number {
+    width: 32px !important;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  .skills .skill-item {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+  .skills .arrow-wrapper {
+    width: 48px !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .skills .skill-image {
+    display: none !important;
+  }
+  .skills-description-inner .col {
+    width: 32px !important;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  .skills-description-text {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    width: 70%;
+  }
+  .skills .spacer {
+    width: 32px !important;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .navbar .navbar-brand {
+    margin: 0rem;
+  }
+  .navbar .navbar-brand a.nav-link {
+    font-size: 1rem;
+  }
+  .navbar .container-fluid {
+    flex-direction: column;
+  }
+  .navbar-expand .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar .navbar-nav li.nav-item a.nav-link {
+    font-size: 0.8rem;
+    padding-left: 0.5 !important;
+    padding-right: 0.5 !important;
+  }
+  .intro-inner h1 {
+    font-size: 1.2rem;
+  }
+  .download-btn-container {
+    display: none;
+  }
 }
