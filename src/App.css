@@ -690,8 +690,9 @@ header .title {
   margin: 0 auto;
 }
 .intro-container {
-  position: absolute;
   width: 100%;
+  margin-top: -4rem;
+  position: absolute;
 }
 .intro-container .intro {
   display: flex;
@@ -1086,5 +1087,26 @@ header .title {
   }
   .send-btn {
     text-align: center;
+  }
+  .modal.custom .modal-dialog {
+    max-width: 100vw;
+    margin: 0;
+  }
+  .modal.custom .modal-content {
+    height: 100vh;
+  }
+  .modal.custom .modal-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .modal.custom .modal-title {
+    font-size: 0.7rem;
+  }
+  .modal.custom .modal-support {
+    display: none;
+  }
+  .about svg {
+    position: absolute;
+    bottom: 0;
   }
 }

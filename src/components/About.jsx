@@ -56,14 +56,13 @@ export const About = () => {
             id: "letter-a",
           },
         });
-
         gsap.to(".letter-s", {
           xPercent: 100,
           autoAlpha: 0,
           ease: "none",
           scrollTrigger: {
             trigger: ".section-container",
-            start: "200 top",
+            start: "10 top",
             end: "+=700",
             scrub: true,
             markers: false,
